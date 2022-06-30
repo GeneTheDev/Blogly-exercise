@@ -3,7 +3,7 @@ from app import app
 
 
 def test_redirection(self):
-    with app.test_Users() as User:
+    with app.test_Users(TestCase) as User:
         resp = User.get("/redirect")
 
         self.assertEqual(resp.status_code, 302)
